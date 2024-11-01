@@ -11,12 +11,10 @@
 
 ## Screenshots
 
+<p align = "center">
+  <img width="400" alt="webui" src="https://github.com/Zaque-69/mcsrvstat/tree/main/assets/tui.png">
+</p>
 
-<div align="center">
-
-# <img src="https://github.com/Zaque-69/mcsrvstat/tree/main/assets/tui.png" height="20px"/>
-
-</div>
 
 ## Installation
 
