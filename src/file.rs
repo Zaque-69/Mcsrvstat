@@ -9,8 +9,6 @@ pub fn write_server_info(file_path: &str, text: &str) -> Result<()> {
         .write(true)
         .append(true)
         .open(file_path)?;
-
-    // Scrie textul în fișier
     writeln!(file, "{}", text)?;
 
     Ok(())
