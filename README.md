@@ -12,7 +12,7 @@
 ## Screenshots
 
 <p align = "center">
-  <img width="400" alt="webui" src="https://github.com/Zaque-69/mcsrvstat/tree/main/assets/tui.png">
+  <img width="400" alt="webui" src="https://github.com/Zaque-69/mcsrvstat/blob/main/assets/tui.png">
 </p>
 
 
