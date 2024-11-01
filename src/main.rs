@@ -38,19 +38,24 @@ fn run_app<B: Backend>(terminal: &mut Terminal<B>) -> io::Result<()> {
                 .horizontal_margin(10)
                 .constraints(
                     [
+                        Constraint::Percentage(25), 
                         Constraint::Percentage(5), 
                         Constraint::Percentage(25), 
-                        Constraint::Percentage(20),
+                        Constraint::Percentage(25),
                         Constraint::Percentage(20)
                     ].as_ref())
                 .split(f.size());
 
             // The first table for the Motto of the day
-            let table1 = Table::new(vec![Row::new(vec![Cell::from(trim_whitespace(info[6].clone().as_str()))])])
+            let table1 = Table::new(vec![Row::new(vec![Cell::from("")])])
+                .block(Block::default().borders(Borders::NONE)).widths(&[Constraint::Percentage(100)]);
+
+            // The first table for the Motto of the day
+            let table2 = Table::new(vec![Row::new(vec![Cell::from(trim_whitespace(info[6].clone().as_str()))])])
                 .block(Block::default().borders(Borders::NONE)).widths(&[Constraint::Percentage(100)]);
 
             // First tabel
-            let table2 = Table::new(vec![
+            let table3 = Table::new(vec![
                 Row::new(vec![Cell::from("")]),
                 Row::new(vec![
                     Cell::from(Spans::from(vec![
@@ -84,7 +89,7 @@ fn run_app<B: Backend>(terminal: &mut Terminal<B>) -> io::Result<()> {
             .widths(&[Constraint::Percentage(100)]);
 
             // Second tabel
-            let table3 = Table::new(vec![
+            let table4 = Table::new(vec![
                 Row::new(vec![Cell::from("")]),
                 Row::new(vec![
                     Cell::from(Spans::from(vec![
@@ -117,7 +122,7 @@ fn run_app<B: Backend>(terminal: &mut Terminal<B>) -> io::Result<()> {
                     .border_style(Style::default().fg(Color::White)))
             .widths(&[Constraint::Percentage(100)]);
 
-            let table4 = Table::new(vec![Row::new(vec![Cell::from("")])])
+            let table5 = Table::new(vec![Row::new(vec![Cell::from("")])])
                 .block(Block::default().borders(Borders::NONE)).widths(&[Constraint::Percentage(100)]);
 
             // Showing the tables
@@ -125,6 +130,7 @@ fn run_app<B: Backend>(terminal: &mut Terminal<B>) -> io::Result<()> {
             f.render_widget(table2, chunks[1]);
             f.render_widget(table3, chunks[2]);
             f.render_widget(table4, chunks[3]);
+            f.render_widget(table5, chunks[3]);
         })?;
 
         // Exit the app by pressing 'q'
