@@ -9,13 +9,6 @@
 - **Real-Time Data**: The application fetches up-to-date server information for each query, ensuring accuracy.
 - **Minimalism and Performance**: Built to run quickly and efficiently, Mcsrvstat is ideal for continuous monitoring.
 
-## Screenshots
-
-<p align = "center">
-  <img width="400" alt="webui" src="https://github.com/Zaque-69/mcsrvstat/blob/main/assets/tui.png">
-</p>
-
-
 ## Installation
 
 To install Mcsrvstat on your system, you need **Rust** and **Cargo**.
@@ -41,3 +34,9 @@ direnv allow
 ```sh
 cargo run hypixel.net
 ```
+
+## Screenshots
+
+<p align = "left">
+  <img width="400" alt="webui" src="https://github.com/Zaque-69/mcsrvstat/blob/main/assets/tui.png">
+</p>
