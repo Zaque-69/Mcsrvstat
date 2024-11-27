@@ -1,9 +1,9 @@
 { pkgs ? import <nixpkgs> {} }:
 
 pkgs.mkShell {
-  buildInputs = [
-    pkgs.openssl
-    pkgs.cargo 
+  buildInputs = with pkgs; [
+    openssl
+    cargo 
   ];
 
   shellHook = ''
