@@ -24,9 +24,14 @@ cd mcsrvstat
 
 To run Mcsrvstat on your system, you need to execute the following commands : 
 
-### For Nix users : 
+### For Nix users to edit the app : 
 ```sh
 direnv allow
+```
+
+### Build the app with 'flake.nix' : 
+```sh
+nix build
 ```
 
 ## Showing the data in real-time :
